@@ -49,5 +49,10 @@ function parse_git_dirty {
   fi
 }
 
+
+alias la="ls -la"
+alias gs="git status"
+alias diff="git diff"
+
 export PS1="\[\e[36m\]\u\[\e[m\]@\W\[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[37m\]:\[\e[m\] "
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
