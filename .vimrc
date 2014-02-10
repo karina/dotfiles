@@ -21,3 +21,5 @@ filetype indent on
 imap <C-w><C-w> <Esc><C-w><C-w>
 :colorscheme ir_black
 cmap w!! w !sudo tee >/dev/null %
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%100v.\+/
