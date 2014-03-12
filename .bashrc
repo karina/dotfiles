@@ -1,5 +1,8 @@
-export PATH=/usr/local/bin:$PATH
-
+export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
+export ANSIBLE_NOCOWS=1
+export ANSIBLE_SSH_ARGS=""
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export HEGEMON_ENVIRONMENT=vagrant_single
 export EDITOR=vim
 
 # get current branch in git repo
@@ -53,6 +56,7 @@ function parse_git_dirty {
 alias la="ls -la"
 alias gs="git status"
 alias diff="git diff"
+alias tmux="tmux -2"
 
 export PS1="\[\e[36m\]\u\[\e[m\]@\W\[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[37m\]:\[\e[m\] "
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

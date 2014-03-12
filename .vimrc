@@ -1,12 +1,22 @@
-execute pathogen#infect()
-filetype plugin indent on
-
-set laststatus=2
-
 set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Bundle 'gmarik/vundle'
+
+" Other github packages for Vundle to handle
+Bundle 'scrooloose/syntastic.git'
+Bundle 'nanotech/jellybeans.vim'
+
+filetype plugin indent on 
+
 set number
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set backspace=2
 syntax on
@@ -16,10 +26,20 @@ set incsearch
 set ignorecase
 set autoindent
 set mouse=a
-imap jj <Esc>
 filetype indent on
+
+
+" Lets map things
+imap jj <Esc>
 imap <C-w><C-w> <Esc><C-w><C-w>
-:colorscheme ir_black
+
+" Colors
+colorscheme jellybeans 
+set t_Co=256
+
+""highlight current line
+set cursorline "cursorcolumn
+
 cmap w!! w !sudo tee >/dev/null %
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
