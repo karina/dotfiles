@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
+" To install: vim, :BundleInstall
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -11,6 +12,7 @@ Bundle 'gmarik/vundle'
 " Other github packages for Vundle to handle
 Bundle 'scrooloose/syntastic.git'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'tpope/vim-fugitive.git'
 
 filetype plugin indent on 
 
