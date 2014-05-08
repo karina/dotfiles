@@ -10,9 +10,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Other github packages for Vundle to handle
+Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive.git'
+
+let g:syntastic_python_flake8_args='--ignore=E501'
 
 filetype plugin indent on 
 
