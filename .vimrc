@@ -14,6 +14,10 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-commentary.git'
+Bundle 'kien/ctrlp.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'kchmck/vim-coffee-script'
 
 let g:syntastic_python_flake8_args='--ignore=E501'
 
@@ -37,6 +41,7 @@ filetype indent on
 " Lets map things
 imap jj <Esc>
 imap <C-w><C-w> <Esc><C-w><C-w>
+let g:ctrlp_map = '<c-p>'
 
 " Colors
 colorscheme jellybeans 
@@ -44,6 +49,10 @@ set t_Co=256
 
 ""highlight current line
 set cursorline "cursorcolumn
+
+""highlight whitespace
+highlight ErrorMsg ctermbg=red ctermfg=white guibg=#599
+match ErrorMsg '\s\+$'
 
 cmap w!! w !sudo tee >/dev/null %
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

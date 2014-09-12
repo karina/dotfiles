@@ -1,6 +1,6 @@
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".bashrc .vimrc .tmux.conf"
+files=".bashrc .vimrc .tmux.conf .bash_profile"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -19,3 +19,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/$file
 done
+
+vundle_path="$HOME/.vim/bundle/vundle"
+[[ -d $vundle_path ]] || git clone https://github.com/gmarik/vundle.git $vundle_path
+vim +BundleInstall +qall

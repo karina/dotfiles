@@ -1,9 +1,10 @@
 export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
 export ANSIBLE_NOCOWS=1
 export ANSIBLE_SSH_ARGS=""
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-export HEGEMON_ENVIRONMENT=vagrant_single
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export HEGEMON_ENVIRONMENT=vagrant
 export EDITOR=vim
+export HEGEMON_DEFAULT_APP=helios
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -57,6 +58,7 @@ alias la="ls -la"
 alias gs="git status"
 alias diff="git diff"
 alias tmux="tmux -2"
+alias git-accomplishments='git log --since=1.weeks --author=$USER --abbrev-commit --pretty="%h - %s"'
 
 export PS1="\[\e[36m\]\u\[\e[m\]@\W\[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[37m\]:\[\e[m\] "
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:~/src/hegemon/scripts
