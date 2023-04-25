@@ -51,7 +51,7 @@ set t_Co=256
 set cursorline "cursorcolumn
 
 ""highlight whitespace
-highlight ErrorMsg ctermbg=red ctermfg=white guibg=#599
+highlight ErrorMsg ctermbg=red ctermfg=white guibg=#592929
 match ErrorMsg '\s\+$'
 
 cmap w!! w !sudo tee >/dev/null %
