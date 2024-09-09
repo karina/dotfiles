@@ -1,6 +1,6 @@
 dir=~/src/dotfiles
 olddir=~/dotfiles_old
-files=".bashrc .vimrc .tmux.conf .bash_profile"
+files=".zshrc .bashrc .vimrc .tmux.conf .bash_profile"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
