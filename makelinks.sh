@@ -1,4 +1,4 @@
-dir=~/dotfiles
+dir=~/src/dotfiles
 olddir=~/dotfiles_old
 files=".bashrc .vimrc .tmux.conf .bash_profile"
 
@@ -20,6 +20,6 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
-vundle_path="$HOME/.vim/bundle/vundle"
+vundle_path="$HOME/.vim/bundle/Vundle.vim"
 [[ -d $vundle_path ]] || git clone https://github.com/gmarik/vundle.git $vundle_path
 vim +BundleInstall +qall

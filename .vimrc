@@ -2,25 +2,25 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-" To install: vim, :BundleInstall
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" To install: vim, :PluginInstall
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Other github packages for Vundle to handle
-Bundle 'airblade/vim-gitgutter'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-commentary.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-commentary.git'
+Plugin 'kien/ctrlp.vim'
 
 let g:syntastic_python_flake8_args='--ignore=E501'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype plugin indent on 
 
 set number
